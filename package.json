@@ -1,0 +1,31 @@
+{
+  "name": "social_networkapi",
+  "version": "1.0.0",
+  "description": "Social network API that uses NoSQL database",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Renatatims/social_networkAPI.git"
+  },
+  "keywords": [
+    "social",
+    "network",
+    "API"
+  ],
+  "author": "Renata Rondon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Renatatims/social_networkAPI/issues"
+  },
+  "homepage": "https://github.com/Renatatims/social_networkAPI#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
