@@ -5,12 +5,12 @@ const {
   createThought
 
 
-} = require("../../controllers/userController");
+} = require("../../controllers/thoughtController");
 
 // /api/thoughts
 router.route("/").get(getThoughts).post(createThought);
 
 // /api/thoughts/:thoughtId
-router.route("/:userId").get(getSingleThought);
+router.route("/:thoughtId").get(getSingleThought);
 
 module.exports = router; 
