@@ -1,5 +1,5 @@
 const { Schema, model } = require("mongoose");
-const dayjs = require("dayjs");
+const dayjs = require ("dayjs");
 const reactionSchema = require("./Reaction");
 
 const thoughtSchema = new Schema(
@@ -14,7 +14,7 @@ const thoughtSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: (timestamp) => dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss'),
+      get: (timestamp) => dayjs(timestamp).format('MM-DD-YYYY [at] HH:mm'),
     },
     username: {
       type: String,
@@ -25,6 +25,7 @@ const thoughtSchema = new Schema(
   {
     toJSON: {
       virtuals: true,
+      getters: true
     },
     id: false,
   }
