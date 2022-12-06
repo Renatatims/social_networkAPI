@@ -21,15 +21,12 @@ This application is a social media API that uses NoSQL database. Data can be add
 ## Installation
 
 MongoDB + npm i packages:
-
 ```
 "dayjs": "^1.11.6",
 "express": "^4.18.2",
 "mongoose": "^6.7.5",
 "mongoose-type-email": "^1.1.2"
-
 ```
-
 ## Usage
 
 The user can use the below routes in Insomnia to add, update or delete data:
@@ -40,21 +37,21 @@ localhost:3001/api
 1. POST - /users - Create a new user
 2. POST - /thoughts - Create a new thought
 3. POST - /users/:userId/friends/:friendId - Add a new Friend
-4. POST - /thoughts/:thoughtId/reactions/:reactionId - Create a reaction
+4. POST - /thoughts/:thoughtId/reactions/ - Create a reaction
 
 ### GET Routes
 1. GET - /users/ - Get all users
 2. GET - /users/:userId - Get single user
 3. GET - /thoughts/ - Get all thoughts
-4. GET - /users/:thoughtId - Get single thought
+4. GET - /thoughts/:thoughtId - Get single thought
 
-#### PUT Routes
+### PUT Routes
 1. PUT - /users/:userId - Update a user
 2. PUT - /thoughts/:thoughtId - Update a thought
 
 ### DELETE Routes
 1. DELETE - /users/:userId - Delete a User
-2. DEELETE - /thoughts/:thoughtId - Delete a thought
+2. DELETE - /thoughts/:thoughtId - Delete a thought
 3. DELETE - /users/:userId/friends/:friendId - Delete a friend
 4. DELETE - /thoughts/:thoughtId/reactions/:reactionId - Delete a Reaction
 
