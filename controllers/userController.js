@@ -4,17 +4,12 @@ const { User, Thought } = require('../models');
 module.exports = {
     // Get all users - GET
     getUsers(req, res) {
-      User.find()
-        .then(async (users) => {
-          const userObj = {
-            users
-          };
-          return res.json(userObj);
-        })
-        .catch((err) => {
-          console.log(err);
-          return res.status(500).json(err);
-        });
+      User.find({})
+      .populate("thoughts")
+      .populate("friends")
+      .select("-__v")
+      .then((users) => res.json(users))
+      .catch((err) => res.status(500).json(err));
     },
   // Get a single user - GET
   getSingleUser(req, res) {
@@ -63,7 +58,7 @@ module.exports = {
       .then((user) =>
         !user
           ? res.status(404).json({ message: 'No user with that ID' })
-          : Thought.deleteMany({ _id: { $in: user.thoughts } })
+          : Thought.deleteMany({ username: user.username })
       )
       .then(() => res.json({ message: 'User and Thoughts deleted!' }))
       .catch((err) => res.status(500).json(err));
