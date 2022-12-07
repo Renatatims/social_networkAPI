@@ -1,11 +1,20 @@
 # social_networkAPI
 
 Social network API that uses NoSQL database
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
 This application is a social media API that uses NoSQL database. Data can be added, update or deleted using Insomnia.
+
+![Preview](assets/screenshots/Capture1.PNG)
+
+## Demo Video available at:
+
+Please follow the below link to the demo video demonstration:
+
+https://drive.google.com/file/d/145iyzFAxnzFDRSvXlr_smQCasb1pPjDC/view
 
 ## Table of Contents
 
@@ -30,8 +39,11 @@ MongoDB + npm i packages:
 ## Usage
 
 The user can use the below routes in Insomnia to add, update or delete data:
+````
+localhost:3001/api/
+````
 
-localhost:3001/api
+Localhost above in addition with the following routes:
 
 ### POST Routes
 1. POST - /users - Create a new user
@@ -72,13 +84,13 @@ Please feel free to send a pull request, the following is my GitHub account: htt
 
 ## Tests
 
-You can test the application by running `npm index` in the terminal. A schema with models will be created in MongoDB Compass, and data can be added, updated or deleted using Insomnia.
+You can test the application by running `npm start` in the terminal. A schema with models will be created in MongoDB Compass, and data can be added, updated or deleted using Insomnia.
 
 ## Questions
 
 If you have any questions please contact me at:
 
-- GitHub account:https://github.com/Renatatims
+- GitHub account: https://github.com/Renatatims
 - e-mail account: renatatims@gmail.com
 
 ## Credits
