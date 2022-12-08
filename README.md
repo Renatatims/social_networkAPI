@@ -14,7 +14,7 @@ This application is a social media API that uses NoSQL database. Data can be add
 
 Please follow the below link to the demo video demonstration:
 
-https://drive.google.com/file/d/145iyzFAxnzFDRSvXlr_smQCasb1pPjDC/view
+https://drive.google.com/file/d/1fGGLQpdGMo8GszqDwQ5DLj5kZBAvdNyB/view
 
 ## Table of Contents
 
@@ -45,27 +45,27 @@ localhost:3001/api/
 
 Localhost above in addition with the following routes:
 
-### POST Routes
+### USERS Routes
 1. POST - /users - Create a new user
-2. POST - /thoughts - Create a new thought
-3. POST - /users/:userId/friends/:friendId - Add a new Friend
-4. POST - /thoughts/:thoughtId/reactions/ - Create a reaction
+2. GET - /users/ - Get all users
+3. GET - /users/:userId - Get a single user by id
+4. PUT - /users/:userId - Update a user
+5. DELETE - /users/:userId - Delete a User
 
-### GET Routes
-1. GET - /users/ - Get all users
-2. GET - /users/:userId - Get single user
-3. GET - /thoughts/ - Get all thoughts
-4. GET - /thoughts/:thoughtId - Get single thought
+### THOUGTS Routes
+1. POST - /thoughts - Create a new thought
+2. GET - /thoughts/ - Get all thoughts
+3. GET - /thoughts/:thoughtId - Get a single thought by id
+4. PUT - /thoughts/:thoughtId - Update a thought
+5. DELETE - /thoughts/:thoughtId - Delete a thought
 
-### PUT Routes
-1. PUT - /users/:userId - Update a user
-2. PUT - /thoughts/:thoughtId - Update a thought
+### REACTIONS Routes
+1. POST - /thoughts/:thoughtId/reactions/ - Create a reaction
+2. DELETE - /thoughts/:thoughtId/reactions/:reactionId - Delete a Reaction
 
-### DELETE Routes
-1. DELETE - /users/:userId - Delete a User
-2. DELETE - /thoughts/:thoughtId - Delete a thought
-3. DELETE - /users/:userId/friends/:friendId - Delete a friend
-4. DELETE - /thoughts/:thoughtId/reactions/:reactionId - Delete a Reaction
+### FRIENDS Routes
+1. POST - /users/:userId/friends/:friendId - Add a new Friend
+2. DELETE - /users/:userId/friends/:friendId - Delete a friend
 
 ## Features
 
